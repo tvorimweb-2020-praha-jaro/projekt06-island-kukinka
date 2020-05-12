@@ -9,8 +9,8 @@
 
 
 body {
-    margin: 10px;
-    padding: 10px;
+    margin: 0px;
+    padding: 0px;
     background-color: white;
     font-family: 'Merriweather', serif;
     font-size: 14px;
@@ -25,17 +25,25 @@ body {
 
 /* HLAVICKA */
 
+h1{
+  margin-top: 0px;
+}
 .titulek {
     font-family: 'Raleway', serif;
-    padding-top: 30px;
+    padding-top: 60px;
+    font-size: 60px;
+  
 }
+
+
+
 
 .hlavicka {
     background-image: url(images/island-hlavicka.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
     color: white;
     text-align: center;
-    }
+       }
 
 .line2 {
   background-color: white;
@@ -46,7 +54,8 @@ body {
 }
 
 .autor{
-  
+  padding-bottom:50px;
+  padding-top: 10px;
   
 }
 
@@ -85,6 +94,10 @@ div.popisek {
   align-content: center;
 }
 
+.obrazek {
+  max-width: 100%;
+}
+
 .popisek {
   color:grey;
   text-decoration: none;
@@ -115,38 +128,46 @@ a {
   color: grey;
 }
 
+
+
 @media (min-width:500px) {
   li {
     display:inline-block;
     padding: 5px;
     font-size: 12px;
   }
-
  
   .foto{
     float:left;
     width: 50%;
-    overflow: hidden;
+    position: relative;
   }
-
-  .foto:hover img {
-    position:absolute;
-    width: 100%;
-    bottom: 0;
-    margin: 0;
-    padding: 10px 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-   
-  }
-  .foto .popisek a {
-    color: white;
+  
+  .foto .popisek {
+    visibility: hidden;
+    width: 200px;
+    background-color:rgb(71, 67, 67);
+    color: #fff;
+    text-align: center;
+    border-radius: 12px;
+    padding: 1px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 70%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
   }
 
   .foto:hover .popisek {
-    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
   }
+
 }
+
+
 
 @media (min-width:1000px) {
   li{
@@ -157,6 +178,7 @@ a {
     display:flex;
     justify-content: space-between;
   }
+  
   .menu2 {
     padding-right: 70px;
     width: 600px;
@@ -166,10 +188,34 @@ a {
   .galerie {
     display: flex;
     flex-wrap: wrap;
-  }
+    align-items: flex-start;
+    max-width: 960px;
+    }
+
   .foto {
     float:left;
     width: 33%;
+    overflow: hidden;
+    
   }
+
+  .obsah {
+    margin: auto;
+    max-width: 960px;
+    border: 0.5px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 1px 2px 2px #aaaaaa;
+    padding: 10px;
+    margin-top:-40px;
+   
+  }
+
+  .perex {
+  
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+ 
+
 }
     
